@@ -29,7 +29,6 @@ return [
     'Current Password' => '当前密码',
     'New Password' => '新密码',
     'New Password Confirm' => '确认新密码',
-
     'Email Confirmation' => '验证邮件',
 
     'Provider' => 'Provider',
@@ -53,6 +52,8 @@ return [
 	'Passwords do not match' => '两个密码不一致',
     '{attribute} can contain only letters, numbers, and "_"' => '{attribute} 只能包含字母、数字和下划线_',
     'Incorrect Account/Password' => '无效的账号/密码',
+    'Passwords do not match' => '两个密码不一致',
+    'can contain only letters, numbers, and \'_\'.' => '只能包含字母、数字和下划线_',
 
     // controllers
     'Successfully registered [ {displayName} ]' => '[ {displayName} ] 注册成功！',
