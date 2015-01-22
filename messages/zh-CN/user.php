@@ -29,6 +29,7 @@ return [
     'Current Password' => '当前密码',
     'New Password' => '新密码',
     'New Password Confirm' => '确认新密码',
+
     'Email Confirmation' => '验证邮件',
 
     'Provider' => 'Provider',
