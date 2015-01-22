@@ -49,8 +49,9 @@ return [
     'Incorrect password' => '错误的密码',
     'Remember Me' => '记住登陆状态',
     'Email is already active' => '该邮箱已经被激活，无需再激活',
-    'Passwords do not match' => '两个密码不一致',
+	'Passwords do not match' => '两个密码不一致',
     '{attribute} can contain only letters, numbers, and "_"' => '{attribute} 只能包含字母、数字和下划线_',
+    'Incorrect Account/Password' => '无效的账号/密码',
 
     // controllers
     'Successfully registered [ {displayName} ]' => '[ {displayName} ] 注册成功！',
@@ -58,7 +59,7 @@ return [
     'Account updated' => '账号已更新',
     'Profile updated' => '个人资料已更新',
     'Confirmation email resent' => '验证邮件已发送',
-    'Email change cancelled' => '已取消更改邮箱地址得请求',
+    'Email change cancelled' => '已取消更改新邮箱地址',
     'Instructions to reset your password have been sent' => '重置密码邮件已发送',
 
     // mail
@@ -79,7 +80,7 @@ return [
 
     // default views
     'Account' => '账号',
-    'Pending email confirmation: [ {newEmail} ]' => '等待邮件验证: [ {newEmail} ]',
+    'Pending email confirmation: [ {newEmail} ]' => '等待您的邮件验证: [ {newEmail} ]',
     'Cancel' => '取消',
     'Changing your email requires email confirmation' => '更改邮箱地址，需要重新邮件验证',
     'Confirmed' => '验证',

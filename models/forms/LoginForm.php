@@ -52,12 +52,16 @@ class LoginForm extends Model
         // check for valid user
         $user = $this->getUser();
         if (!$user) {
-            if (Yii::$app->getModule("user")->loginEmail && Yii::$app->getModule("user")->loginUsername) {
-                $attribute = "Email / Username";
-            } else {
-                $attribute = Yii::$app->getModule("user")->loginEmail ? "Email" : "Username";
-            }
-            $this->addError("username", Yii::t("user", "$attribute not found"));
+
+            // calculate error message
+//            if (Yii::$app->getModule("user")->loginEmail && Yii::$app->getModule("user")->loginUsername) {
+//                $attribute = "Email / Username";
+//            } else {
+//                $attribute = Yii::$app->getModule("user")->loginEmail ? "Email" : "Username";
+//            }
+//            $this->addError("username", Yii::t("user", "$attribute not found"));
+            $this->addError("username", Yii::t("user", "Incorrect Account/Password"));
+            $this->addError("password", Yii::t("user", "Incorrect Account/Password"));
         }
     }
 
@@ -99,7 +103,9 @@ class LoginForm extends Model
         /** @var \amnah\yii2\user\models\User $user */
         $user = $this->getUser();
         if (!$user->verifyPassword($this->password)) {
-            $this->addError("password", Yii::t("user", "Incorrect password"));
+//            $this->addError("password", Yii::t("user", "Incorrect password"));
+            $this->addError("username", Yii::t("user", "Incorrect Account/Password"));
+            $this->addError("password", Yii::t("user", "Incorrect Account/Password"));
         }
     }
 
