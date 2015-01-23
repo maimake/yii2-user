@@ -98,7 +98,7 @@ class User extends ActiveRecord implements IdentityInterface
             [['newPassword'], 'string', 'min' => 6],
             [['newPassword'], 'filter', 'filter' => 'trim'],
             [['newPassword'], 'required', 'on' => ['register', 'reset']],
-            [['newPasswordConfirm'], 'required', 'on' => ['reset']],
+            [['newPasswordConfirm'], 'required', 'on' => ['register', 'reset']],
             [['newPasswordConfirm'], 'compare', 'compareAttribute' => 'newPassword', 'message' => Yii::t('user','Passwords do not match')],
 
             // account page
