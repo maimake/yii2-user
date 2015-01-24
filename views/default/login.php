@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use yii\captcha\Captcha;
 
 /**
  * @var yii\web\View $this
@@ -30,6 +31,11 @@ $this->params['breadcrumbs'][] = $this->title;
 
 	<?= $form->field($model, 'username') ?>
 	<?= $form->field($model, 'password')->passwordInput() ?>
+    <?= $form->field($model, 'verifyCode')->widget(Captcha::className(), [
+        'captchaAction' => ['/user/captcha'],
+        'template' => '<div class="row"><div class="col-lg-6">{image}</div><div class="col-lg-6">{input}</div></div>',
+        'imageOptions' => ['style' => 'cursor:pointer', 'title' => Yii::t('user', 'Refresh')],
+    ]) ?>
 	<?= $form->field($model, 'rememberMe', [
 		'template' => "{label}<div class=\"col-lg-offset-2 col-lg-3\">{input}</div>\n<div class=\"col-lg-7\">{error}</div>",
 	])->checkbox() ?>

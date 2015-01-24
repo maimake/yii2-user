@@ -54,6 +54,7 @@ return [
     'Incorrect Account/Password' => '无效的账号/密码',
     'Passwords do not match' => '两个密码不一致',
     'can contain only letters, numbers, and \'_\'.' => '只能包含字母、数字和下划线_',
+    'Verification Code' => '验证码',
 
     // controllers
     'Successfully registered [ {displayName} ]' => '[ {displayName} ] 注册成功！',
@@ -76,6 +77,7 @@ return [
     'Delete' => '删除',
     'Search' => '搜索',
     'Reset' => '重置',
+    'Refresh' => '刷新',
     'Create {modelClass}' => '创建 {modelClass}',
     'Update {modelClass}: ' => '更新 {modelClass}: ',
     'Are you sure you want to delete this item?' => '确定要删除该项目吗？',

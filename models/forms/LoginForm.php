@@ -25,6 +25,12 @@ class LoginForm extends Model
      */
     public $rememberMe = true;
 
+
+    /**
+     * @var string
+     */
+    public $verifyCode;
+
     /**
      * @var \amnah\yii2\user\models\User
      */
@@ -36,11 +42,12 @@ class LoginForm extends Model
     public function rules()
     {
         return [
-            [["username", "password"], "required"],
+            [["username", "password", 'verifyCode'], "required"],
             ["username", "validateUser"],
             ["username", "validateUserStatus"],
             ["password", "validatePassword"],
             ["rememberMe", "boolean"],
+            ['verifyCode', 'captcha', 'captchaAction' => '/user/captcha'],
         ];
     }
 
@@ -153,6 +160,7 @@ class LoginForm extends Model
             "username" => Yii::t("user", $attribute),
             "password" => Yii::t("user", "Password"),
             "rememberMe" => Yii::t("user", "Remember Me"),
+            'verifyCode' => Yii::t('user', 'Verification Code'),
         ];
     }
 

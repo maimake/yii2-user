@@ -24,7 +24,7 @@ class DefaultController extends Controller
                 'class' => AccessControl::className(),
                 'rules' => [
                     [
-                        'actions' => ['index', 'confirm', 'resend'],
+                        'actions' => ['index', 'confirm', 'resend', 'captcha'],
                         'allow'   => true,
                         'roles'   => ['?', '@'],
                     ],
@@ -45,6 +45,15 @@ class DefaultController extends Controller
                 'actions' => [
                     'logout' => ['post'],
                 ],
+            ],
+        ];
+    }
+
+    public function actions()
+    {
+        return [
+            'captcha' => [
+                'class' => 'yii\captcha\CaptchaAction'
             ],
         ];
     }
